@@ -74,3 +74,26 @@ function isBestFriend(f1, f2) {
   }
 }
 
+// problem 5
+function calculateWatchTime(time) {
+  if (Array.isArray(time)) {
+    for (let element of time) {
+      if (typeof element !== "number") {
+        return "Invalid";
+      }
+    }
+
+    let totalTime = 0;
+    for (let i = 0; i < time.length; i++) {
+      totalTime += time[i];
+    }
+
+    let hours = Math.floor(totalTime / 3600);
+    let minutes = Math.floor((totalTime % 3600) / 60);
+    let seconds = totalTime % 60;
+
+    return { hours, minutes, seconds };
+  } else {
+    return "Invalid";
+  }
+}
