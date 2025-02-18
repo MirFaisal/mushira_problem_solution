@@ -32,3 +32,31 @@ function validEmail(email) {
     return "Invalid";
   }
 }
+
+// problem 3
+function electionResult(votes) {
+  if (Array.isArray(votes)) {
+    let mango = 0;
+    let banana = 0;
+
+    for (let i = 0; i < votes.length; i++) {
+      if (votes[i] === "mango") {
+        mango++;
+      } else if (votes[i] === "banana") {
+        banana++;
+      }
+    }
+
+    if (mango > banana) {
+      return "Mango";
+    } else if (banana > mango) {
+      return "Banana";
+    } else {
+      return "Draw";
+    }
+  } else {
+    return "Invalid";
+  }
+}
+
+// problem 4
